@@ -25,5 +25,11 @@ namespace BookStore.App.Models
         [Display(Name = "NrOfPages")]
         [Required(ErrorMessage = "Number of pages is required")]
         public int NrOfPages { get; set; }
+
+
+        [Display(Name = "URLimg")]
+        [Required(ErrorMessage = "URLimg of pages is required")]
+        public string  URLimg{ get; set; }
+
     }
 }

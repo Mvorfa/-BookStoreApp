@@ -39,6 +39,7 @@ namespace BookStore.App.Services
             result.Author = newBook.Author;
             result.NrOfPages = newBook.NrOfPages;
             result.PublishedYear = newBook.PublishedYear;
+            result.URLimg = newBook.URLimg; 
 
             _context.Books.Update(result);
             _context.SaveChanges();

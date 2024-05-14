@@ -6,8 +6,10 @@
     <thead>
         <tr>
             <th scope="col">#</th>
+
             <th scope="col">Title</th>
             <th scope="col">Author</th>
+            <th scope="col">Profile Picture</th>
             <th scope="col">Options</th>
         </tr>
     </thead>
@@ -19,6 +21,9 @@
                 <th scope="row">@book.Id</th>
                 <td>@book.Title</td>
                 <td>@book.Author</td>
+                <td>
+                    <img src="@Url.Content(book.URLimg)" width="50"/>
+                </td>
                 <td>
                     <a asp-controller="Book"
                        asp-action="Modify"

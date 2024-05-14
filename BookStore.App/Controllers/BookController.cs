@@ -20,7 +20,9 @@ namespace BookStore.App.Controllers
             {
                 Id = n.Id,
                 Title = n.Title,
-                Author = n.Author
+                Author = n.Author,
+                URLimg = n.URLimg,
+
             }).ToList();
 
             return View(allBooksData);
@@ -41,7 +43,7 @@ namespace BookStore.App.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateConfirm([Bind("Title,Author,PublishedYear,NrOfPages")]Book createBook)
+        public IActionResult CreateConfirm([Bind("Title,Author,PublishedYear,NrOfPages,URLimg")]Book createBook)
         {
             if (!ModelState.IsValid)
             {
@@ -62,7 +64,7 @@ namespace BookStore.App.Controllers
         }
 
         [HttpPost]
-        public IActionResult ModifyConfirm(int id , [Bind("Title,Author,PublishedYear,NrOfPages")] Book newbook)
+        public IActionResult ModifyConfirm(int id , [Bind("Title,Author,PublishedYear,NrOfPages,URLimg")] Book newbook)
         {
             if (!ModelState.IsValid)
             {
